@@ -112,6 +112,9 @@ public class DrawingView extends View{
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        
+        getParent().requestDisallowInterceptTouchEvent(true);
+        
         //prevent drawing in the padding
         canvas.clipRect(
                 getPaddingStart(),
